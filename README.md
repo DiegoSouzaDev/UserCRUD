@@ -11,7 +11,7 @@ Implementar o Back-end que seria utilizado pelo processo de cadastro de clientes
 
 É necessário que sejam implementados os métodos de listagem, exclusão, inclusão e alteração levando em conta a tela anexa.
 
-"imagem aqui"
+<img src="https://drive.google.com/open?id=0B9wbZqcXc-kpU3Jad2JCZlJwWHEwcHBDQ2lQMlgtcWxFYnd3"/>
 
 Deverá implementar a divisão de camadas Controller e Service, disponibilizando chamada rest para o front-end. 
 Não será necessário implementar persistência, podendo fazer algum mock dos dados. 
