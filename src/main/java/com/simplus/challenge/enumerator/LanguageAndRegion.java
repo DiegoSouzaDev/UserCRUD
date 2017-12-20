@@ -1,5 +1,5 @@
 package com.simplus.challenge.enumerator;
 
 public enum LanguageAndRegion {
-	EN_EUA, EN_EUROPE, PT_BR;
+	EN_US, EN_UK, PT_BR;
 }

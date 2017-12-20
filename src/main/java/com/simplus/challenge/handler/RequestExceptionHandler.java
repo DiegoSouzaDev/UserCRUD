@@ -7,15 +7,15 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.simplus.challenge.exception.NoUserToUpdateException;
-import com.simplus.challenge.exception.UserNameAlreadyExistException;
+import com.simplus.challenge.exception.UserNameAlreadyExistsException;
 
 @ControllerAdvice
 @RestController
 public class RequestExceptionHandler {
 	
-	@ExceptionHandler(UserNameAlreadyExistException.class)
+	@ExceptionHandler(UserNameAlreadyExistsException.class)
 	@ResponseStatus(value = HttpStatus.BAD_REQUEST)
-	public String userNameAlreadyExistHandler(final UserNameAlreadyExistException e) {
+	public String userNameAlreadyExistHandler(final UserNameAlreadyExistsException e) {
 		return "400 Bad Request: Username already in use by a user.";
 	}
 

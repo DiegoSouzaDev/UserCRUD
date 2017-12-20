@@ -17,7 +17,7 @@ public class User {
 	private String email;
 	private Role role;
 	private String phone;
-	private String ramal;
+	private String extension;
 	private String cellphone;
 	private Ocupation ocupation;
 	private Company company;

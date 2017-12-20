@@ -19,7 +19,7 @@ import com.simplus.challenge.enumerator.Role;
 import com.simplus.challenge.enumerator.State;
 import com.simplus.challenge.enumerator.Target;
 import com.simplus.challenge.exception.NoUserToUpdateException;
-import com.simplus.challenge.exception.UserNameAlreadyExistException;
+import com.simplus.challenge.exception.UserNameAlreadyExistsException;
 import com.simplus.challenge.model.Address;
 import com.simplus.challenge.model.Company;
 import com.simplus.challenge.model.User;
@@ -46,7 +46,7 @@ public class UserServiceTest {
 		Assert.assertEquals(index, userId);
 	}
 
-	@Test(expected = UserNameAlreadyExistException.class)
+	@Test(expected = UserNameAlreadyExistsException.class)
 	public void testCreateWithDuplicatedUsername() throws Exception {
 		final User user = getUser(1l);
 		when(repos.userNameAlreadyExist(user.getUserName())).thenReturn(true);
@@ -88,9 +88,7 @@ public class UserServiceTest {
 	@Test
 	public void testDeleteUser() {
 		final Long id = 3l;
-		
 		service.delete(id);
-
 		verify(repos, times(1)).delete(id);
 	}
 	
@@ -109,7 +107,7 @@ public class UserServiceTest {
 		user.setEmail(user.getName() + "@domain.com");
 		user.setRole(Role.ADMIN);
 		user.setPhone("phoneNumber + index");
-		user.setRamal("ramal" + index);
+		user.setExtension("ramal" + index);
 		user.setCellphone("cellNumber" + index);
 		user.setOcupation(Ocupation.MANAGER);
 		user.setCompany(getCompany(index));
@@ -135,8 +133,7 @@ public class UserServiceTest {
 		addr.setCity("city" + index);
 		addr.setState(State.SC);
 		addr.setCountry("country" + index);
-		addr.setCep("89231-11" + index);
+		addr.setZipCode("89231-11" + index);
 		return addr;
 	}
-
 }

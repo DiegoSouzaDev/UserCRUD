@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.simplus.challenge.exception.NoUserToUpdateException;
-import com.simplus.challenge.exception.UserNameAlreadyExistException;
+import com.simplus.challenge.exception.UserNameAlreadyExistsException;
 import com.simplus.challenge.model.User;
 import com.simplus.challenge.persistence.UserRepository;
 
@@ -22,7 +22,7 @@ public class UserService {
 
 	public Long create(final User user) {
 		if (repos.userNameAlreadyExist(user.getUserName())) {
-			throw new UserNameAlreadyExistException();
+			throw new UserNameAlreadyExistsException();
 		}
 		return repos.create(user);
 	}
