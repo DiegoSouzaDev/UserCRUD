@@ -67,9 +67,70 @@ DELETE | `/delete/{param}` | Remove o usuário identificado na chamada através 
 
 **Exemplo de JSON**
 
+* Criação de Usuário
+```
+{ 
+  "name" : "Diego",
+	"lastName" : "de Souza",
+	"userName" : "dsouza",
+	"email" : "diego.souza@simplustec.com.br",
+	"role" : "ADMIN",
+	"phone" : "(47)3466-6666",
+	"extension" : "111",
+	"cellphone" : "(47) 98848-3999",
+	"ocupation" : "ANALYST",
+	"company":{
+		"id": 1,
+		"name": "Simplus"
+	},
+	"address":{
+		"street" : "Rua treze",
+		"number" : "150b",
+		"neighborhood" : "Paranaguamirim",
+		"city" : "Joinville",
+		"zipCode" : "89231-595",
+      	"state": "SC",
+      	"country" : "Brasil"
+	},
+	"languageAndRegion" : "PT_BR",
+	"currency" : "BRL",
+	"target" : "VET"
+}
+```
+* Atualização de usuário
+```
+{
+  	"id": 1,
+	"name" : "Diego",
+	"lastName" : "de Souza",
+	"userName" : "dsouza",
+	"email" : "diego.souza@simplustec.com.br",
+	"role" : "ADMIN",
+	"phone" : "(47)3466-6666",
+	"extension" : "222",
+	"cellphone" : "(47) 98848-3999",
+	"ocupation" : "ANALYST",
+	"company":{
+		"id": 1,
+		"name": "Simplus"
+	},
+	"address":{
+		"street" : "Rua treze",
+		"number" : "150b",
+		"neighborhood" : "Paranaguamirim",
+		"city" : "Joinville",
+		"zipCode" : "89231-595",
+		"country" : "Brasil"
+	},
+	"languageAndRegion" : "PT_BR",
+	"currency" : "BRL",
+	"target" : "VET"
+}
+```
 
 
 **RESPOSTAS**
+
 Código | Resposta
 ------------ | -------------
 `200` | ID do usuário.
