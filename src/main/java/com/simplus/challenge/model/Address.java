@@ -6,12 +6,12 @@ import lombok.Data;
 
 @Data
 public class Address {
-	private final Long id;
-	private final String street;
-	private final String number;
-	private final String neighborhood;
-	private final String city;
-	private final String cep;
-	private final State state;
-	private final String country;
+	private Long id;
+	private String street;
+	private String number;
+	private String neighborhood;
+	private String city;
+	private String cep;
+	private State state;
+	private String country;
 }

@@ -11,19 +11,19 @@ import lombok.Data;
 @Data
 public class User {
 	private Long id;
-	private final String name;
-	private final String lastName;
-	private final String userName;
-	private final String email;
-	private final Role role;
-	private final String phone;
-	private final String ramal;
-	private final String cellphone;
-	private final Ocupation ocupation;
-	private final Company company;
-	private final Address address;
-	private final LanguageAndRegion languageAndRegion;
-	private final Currency currency;
-	private final Target target;
+	private String name;
+	private String lastName;
+	private String userName;
+	private String email;
+	private Role role;
+	private String phone;
+	private String ramal;
+	private String cellphone;
+	private Ocupation ocupation;
+	private Company company;
+	private Address address;
+	private LanguageAndRegion languageAndRegion;
+	private Currency currency;
+	private Target target;
 	
 }
